@@ -1,0 +1,411 @@
+{
+	"info": {
+		"_postman_id": "97e68ebb-c54e-47c8-a11c-ef2cdedad31a",
+		"name": "ProiectCC Copy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\" : \"admin\",\n\t\"password\" : \"admin\",\n\t\"email\"\t : \"diana.brodoceanu.97@gmail.com\",\n    \"address\": \"str Mihai Viteazu nr1, bloc Salina\",\n    \"phoneNumber\": \"0773835128\",\n    \"firstName\"\t : \"Diana\",\n    \"lastName\"\t : \"Brodoceanu\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3002/api/v1/users/register",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_all_users",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1ZmJhOTY5OGMwMDAyYzAwMjAyYzUxYjciLCJ1c2VyUm9sZSI6ImFkbWluIiwidXNlck5hbWUiOiJhZG1pbiIsImlhdCI6MTYwNjA3MjIyNywiYXVkIjoicG9zdG1hbiIsImlzcyI6InN0dWRlbnQiLCJzdWIiOiJUb2tlbiBwZW50cnUgbGFib3JhdG9ydWwgNiJ9.WFp6CUNQhgbqR7eGnGxmYuWjG_gm8ZsgVp3TiOG6TIU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost/auth",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login_admin",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1ZmJhMWY0MGMwZDlhMjAwMTI2NjNmZTciLCJ1c2VyUm9sZSI6ImFkbWluIiwidXNlck5hbWUiOiJhZG1pbiIsImlhdCI6MTYwNjA0NzI0OCwiYXVkIjoicG9zdG1hbiIsImlzcyI6InN0dWRlbnQiLCJzdWIiOiJUb2tlbiBwZW50cnUgbGFib3JhdG9ydWwgNiJ9.WbDohfrhV-hGaztlzICPU9-2-gD3to-HYX0fdaBHZFs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\" : \"admin\",\n\t\"password\" : \"admin\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/v1/users/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_recipes",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1ZmJhMWY0MGMwZDlhMjAwMTI2NjNmZTciLCJ1c2VyUm9sZSI6ImFkbWluIiwidXNlck5hbWUiOiJhZG1pbiIsImlhdCI6MTYwNjA1ODg2NSwiYXVkIjoicG9zdG1hbiIsImlzcyI6InN0dWRlbnQiLCJzdWIiOiJUb2tlbiBwZW50cnUgbGFib3JhdG9ydWwgNiJ9.T7IVoCGe9WJH8g57hqu4sMSU33_42savYUFp2R4SjRY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3001/api/v1/recipes/",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"v1",
+						"recipes",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post_recipe",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1ZmJhMWY0MGMwZDlhMjAwMTI2NjNmZTciLCJ1c2VyUm9sZSI6ImFkbWluIiwidXNlck5hbWUiOiJhZG1pbiIsImlhdCI6MTYwNjA0NzI0OCwiYXVkIjoicG9zdG1hbiIsImlzcyI6InN0dWRlbnQiLCJzdWIiOiJUb2tlbiBwZW50cnUgbGFib3JhdG9ydWwgNiJ9.WbDohfrhV-hGaztlzICPU9-2-gD3to-HYX0fdaBHZFs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"name\" : \"test1\",\r\n    \"clientId\" : \"5eb2a08c1cce19002a5aa391\",\r\n    \"goals\" : [\"fix split ends\",\"hidrate\"],\r\n    \"hairType\" : \"straight\",\r\n    \"hairStructure\" : \"fine\",\r\n    \"scalpMoisture\" : \"dry\",\r\n    \"siliconFree\" : \"yes\",\r\n    \"fragrance\" : \"lavander & eucaliptus\",\r\n    \"shampooColor\" : \"violet\",\r\n    \"conditionerColor\" : \"blue\",\r\n    \"size\" : \"500ml\",\r\n    \"frequency\" : \"monthly\",\r\n    \"subscription\" : \"active\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3001/api/v1/recipes/",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"v1",
+						"recipes",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "authorize",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1ZmJhMWY0MGMwZDlhMjAwMTI2NjNmZTciLCJ1c2VyUm9sZSI6ImFkbWluIiwidXNlck5hbWUiOiJhZG1pbiIsImlhdCI6MTYwNjAzODA2NiwiYXVkIjoicG9zdG1hbiIsImlzcyI6InN0dWRlbnQiLCJzdWIiOiJUb2tlbiBwZW50cnUgbGFib3JhdG9ydWwgNiJ9.jdVY-m-DfOH3gnKu084ut0jraXEyW_QYe2O4cDA74PQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/v1/users/authorize",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"authorize"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "put_recipe",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1ZmJhMWY0MGMwZDlhMjAwMTI2NjNmZTciLCJ1c2VyUm9sZSI6ImFkbWluIiwidXNlck5hbWUiOiJhZG1pbiIsImlhdCI6MTYwNjA0NzI0OCwiYXVkIjoicG9zdG1hbiIsImlzcyI6InN0dWRlbnQiLCJzdWIiOiJUb2tlbiBwZW50cnUgbGFib3JhdG9ydWwgNiJ9.WbDohfrhV-hGaztlzICPU9-2-gD3to-HYX0fdaBHZFs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"clientId\" : \"5eb2a08c1cce19002a5aa391\",\n\t\"name\" : \"Test Recipe\",\n    \"goals\" : [\"fix split ends\",\"hidrate\"],\n    \"hairType\" : \"straight\",\n    \"hairStructure\" : \"fine\",\n    \"scalpMoisture\" : \"dry\",\n    \"siliconFree\" : \"yes\",\n    \"fragrance\" : \"lavander & eucaliptus\",\n    \"shampooColor\" : \"teal\",\n    \"conditionerColor\" : \"pink\",\n    \"size\" : \"500ml\",\n    \"frequency\" : \"monthly\",\n    \"subscription\" : \"active\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3001/api/v1/recipes/5fba5804bd5c4000206cb2cc",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"v1",
+						"recipes",
+						"5fba5804bd5c4000206cb2cc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deletete_all_recipes",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1ZmJhMWY0MGMwZDlhMjAwMTI2NjNmZTciLCJ1c2VyUm9sZSI6ImFkbWluIiwidXNlck5hbWUiOiJhZG1pbiIsImlhdCI6MTYwNjA0NzI0OCwiYXVkIjoicG9zdG1hbiIsImlzcyI6InN0dWRlbnQiLCJzdWIiOiJUb2tlbiBwZW50cnUgbGFib3JhdG9ydWwgNiJ9.WbDohfrhV-hGaztlzICPU9-2-gD3to-HYX0fdaBHZFs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3001/api/v1/recipes/5fba56f5bd5c4000206cb2cb",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"v1",
+						"recipes",
+						"5fba56f5bd5c4000206cb2cb"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_all_messages",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3002/api/v1/messages",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"api",
+						"v1",
+						"messages"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post_message",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1ZmJhMWY0MGMwZDlhMjAwMTI2NjNmZTciLCJ1c2VyUm9sZSI6ImFkbWluIiwidXNlck5hbWUiOiJhZG1pbiIsImlhdCI6MTYwNjA1MzE2OSwiYXVkIjoicG9zdG1hbiIsImlzcyI6InN0dWRlbnQiLCJzdWIiOiJUb2tlbiBwZW50cnUgbGFib3JhdG9ydWwgNiJ9.A2awk9PcXdGdi3WXpbjUN7JCBMCrvuHNf0RD2F8v7jI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"authorId\" : \"5eb2a08c1cce19002a5aa391\",\r\n\t\"message\" : \"Bun sampon aaaaa\",\r\n\t\"resolved\": \"false\",\r\n    \"faq\": \"false\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3002/api/v1/messages/",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"api",
+						"v1",
+						"messages",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "put_message",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1ZmJhMWY0MGMwZDlhMjAwMTI2NjNmZTciLCJ1c2VyUm9sZSI6ImFkbWluIiwidXNlck5hbWUiOiJhZG1pbiIsImlhdCI6MTYwNjA1MzE2OSwiYXVkIjoicG9zdG1hbiIsImlzcyI6InN0dWRlbnQiLCJzdWIiOiJUb2tlbiBwZW50cnUgbGFib3JhdG9ydWwgNiJ9.A2awk9PcXdGdi3WXpbjUN7JCBMCrvuHNf0RD2F8v7jI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"authorId\" : \"5eb01327ab2c1b001f3072aa\",\n\t\"message\" : \"Bun de tot sampon\",\n\t\"resolved\": \"true\",\n    \"faq\": \"false\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3002/api/v1/messages/5fba6dca29351e0021961bab",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"api",
+						"v1",
+						"messages",
+						"5fba6dca29351e0021961bab"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete_all_messages",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1ZmJhMWY0MGMwZDlhMjAwMTI2NjNmZTciLCJ1c2VyUm9sZSI6ImFkbWluIiwidXNlck5hbWUiOiJhZG1pbiIsImlhdCI6MTYwNjA1MzE2OSwiYXVkIjoicG9zdG1hbiIsImlzcyI6InN0dWRlbnQiLCJzdWIiOiJUb2tlbiBwZW50cnUgbGFib3JhdG9ydWwgNiJ9.A2awk9PcXdGdi3WXpbjUN7JCBMCrvuHNf0RD2F8v7jI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3002/api/v1/messages/",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"api",
+						"v1",
+						"messages",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

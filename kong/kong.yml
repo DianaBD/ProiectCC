@@ -1,0 +1,32 @@
+_format_version: "2.1"
+
+services:
+
+  - name: auth-service
+    url: http://proiect-cluster_auth-service/api/v1/users
+    routes:
+      - name: auth-service-route
+        paths:
+          - /auth
+
+  - name: api-service
+    url: http://proiect-cluster_api-service/api/v1/recipes
+    routes:
+      - name: api-service-route
+        paths:
+          - /recipes
+
+  - name: messages-service
+    url: http://proiect-cluster_messages-service/api/v1/messages
+    routes:
+      - name: messages-service-route
+        paths:
+          - /messages
+
+consumers:
+  - username: lab-student
+    keyauth_credentials:
+      - key: mobylab
+  - username: georgiana-caloianu
+    keyauth_credentials:
+      - key: georgiana

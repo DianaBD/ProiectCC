@@ -1,0 +1,19 @@
+
+#mainContainer {
+  margin: 5rem 10rem;
+
+  .grow { transition: all .1s ease-in-out; }
+  .grow:hover { transform: scale(1.2); }
+
+  .fillBtn {
+    float: right;
+    margin-top: -1rem;
+    margin-bottom: -1rem;
+  }
+
+  .fillBtn, .infoDiv{
+  display: inline-block;
+  vertical-align: middle;
+  margin: 10px 0;
+}
+}
